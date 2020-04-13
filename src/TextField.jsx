@@ -51,7 +51,9 @@ const TextField = props => {
             <label
                 className={classNamer(DEFAULT_LABEL_CLASS_NAME, labelClassName)}
                 style={{
-                    width: labelWidth
+                    width: labelWidth,
+                    minWidth: labelWidth,
+                    maxWidth: labelWidth
                 }}
             >
                 {label}
