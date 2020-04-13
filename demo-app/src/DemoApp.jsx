@@ -18,9 +18,7 @@ function DemoApp() {
                     Learn React
                 </a>
             </header>
-            <TextField>
-                This is into a TextField
-            </TextField>
+            <TextField/>
         </div>
     );
 }

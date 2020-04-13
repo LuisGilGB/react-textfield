@@ -40,5 +40,10 @@
   "peerDependencies": {
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
+  },
+  "dependencies": {
+    "@luisgilgb/js-utils": "^0.3.2",
+    "@luisgilgb/react-container": "^1.0.6",
+    "@luisgilgb/react-utils": "^0.2.3"
   }
 }

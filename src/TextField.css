@@ -1,3 +1,33 @@
-.react-textfield {
+.reacttextfield {
     display: block;
+    margin: 3px;
+    padding: 3px;
+}
+
+.reacttextfield .reacttextfield-label {
+    width: 100px;
+    font-weight: 300;
+    margin-right: 5px;
+    padding-bottom: 3px;
+}
+
+.reacttextfield .reacttextfield-input {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #7F7F7F;
+}
+
+.reacttextfield .reacttextfield-input:focus {
+    outline: none;
+    border-bottom: 1px solid #CFCFFF;
+}
+
+.reacttextfield .reacttextfield-input:focus {
+    background-color: transparent;
 }
