@@ -40,15 +40,13 @@ const TextField = props => {
         <Container
             className={classNamer(DEFAULT_CLASS_NAME, className)}
             layout="rowflex"
-            style={{
-                flex,
-                width,
-                minWidth,
-                maxWidth,
-                height,
-                minHeight,
-                maxHeight
-            }}
+            flex={flex}
+            width={width}
+            minWidth={minWidth}
+            maxWidth={maxWidth}
+            height={height}
+            minHeight={minHeight}
+            maxHeight={maxHeight}
         >
             {!hideLabel && (forceLabelTag || isNonEmptyString(label)) && (
                 <label

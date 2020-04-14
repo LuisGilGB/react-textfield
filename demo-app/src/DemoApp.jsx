@@ -32,6 +32,14 @@ function DemoApp() {
                         label="TextField 2"
                     />
                     <TextField
+                        label="Width 300"
+                        width={300}
+                    />
+                    <TextField
+                        label="Width 700"
+                        width={700}
+                    />
+                    <TextField
                         label="TextField with labelWidth of 300"
                         labelWidth={300}
                     />
