@@ -24,3 +24,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.state-checker-wrapper {
+  padding: 15px;
+}
+
+.state-checker .label {
+  width: 150px;
+  margin-right: 15px;
+}
+
+.state-checker .value {
+  margin-left: 15px;
+  font-weight: bold;
+}

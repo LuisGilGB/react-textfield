@@ -6,7 +6,7 @@ import './DemoApp.css';
 const createDefArray = () => {
     let arr = [];
     for (let i = 0; i < 9; i++) {
-        arr[i] = `Default value ${i}`;
+        arr[i] = `Default value ${i+1}`;
     }
     return arr;
 }
@@ -43,54 +43,69 @@ function DemoApp() {
                 </a>
             </header>
             <Container
-                layout="center"
+                layout="rowflex"
             >
                 <Container
-                    width={600}
+                    flex={1}
+                    layout="center"
                 >
-                    <TextField
-                        {...textFieldPropsFromState(0)}
-                        label="TextField 1"
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(1)}
-                        label="TextField 2"
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(2)}
-                        label="Width 300"
-                        width={300}
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(3)}
-                        label="Width 700"
-                        width={700}
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(4)}
-                        label="TextField with labelWidth of 300"
-                        labelWidth={300}
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(5)}
-                        label="Textfield with height of 200"
-                        height={200}
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(6)}
-                        placeholder="Without label"
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(7)}
-                        forceLabelTag
-                        placeholder="Without label but with forceLabelTag"
-                    />
-                    <TextField
-                        {...textFieldPropsFromState(8)}
-                        hideLabel
-                        label="Hidden"
-                        placeholder="With label but also hideLabel"
-                    />
+                    <Container
+                        width={600}
+                    >
+                        <TextField
+                            {...textFieldPropsFromState(0)}
+                            label="TextField 1"
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(1)}
+                            label="TextField 2"
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(2)}
+                            label="Width 300"
+                            width={300}
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(3)}
+                            label="Width 700"
+                            width={700}
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(4)}
+                            label="TextField with labelWidth of 300"
+                            labelWidth={300}
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(5)}
+                            label="Textfield with height of 200"
+                            height={200}
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(6)}
+                            placeholder="Without label"
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(7)}
+                            forceLabelTag
+                            placeholder="Without label but with forceLabelTag"
+                        />
+                        <TextField
+                            {...textFieldPropsFromState(8)}
+                            hideLabel
+                            label="Hidden"
+                            placeholder="With label but also hideLabel"
+                        />
+                    </Container>
+                </Container>
+                <Container
+                    className="state-checker-wrapper"
+                    width={400}
+                >
+                    {values.map((v, i) => (
+                        <div className="state-checker">
+                            <span className="label">{`Value for TextField ${i+1}:`}</span><span className="value">{v}</span>
+                        </div>
+                    ))}
                 </Container>
             </Container>
         </Container>

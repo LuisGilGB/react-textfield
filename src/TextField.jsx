@@ -4,7 +4,7 @@ import {isNonEmptyString} from '@luisgilgb/js-utils';
 import {classNamer} from '@luisgilgb/react-utils';
 import './TextField.css';
 
-const DEFAULT_CLASS_NAME = 'reacttextfield';
+const DEFAULT_CLASS_NAME = 'r-textfield';
 const DEFAULT_LABEL_CLASS_NAME = `${DEFAULT_CLASS_NAME}-label`;
 const DEFAULT_INPUT_CLASS_NAME = `${DEFAULT_CLASS_NAME}-input`;
 const DEFAULT_DIRTY_CLASS_NAME = `${DEFAULT_CLASS_NAME}-dirty`;

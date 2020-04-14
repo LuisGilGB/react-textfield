@@ -1,17 +1,17 @@
-.reacttextfield {
+.r-textfield {
     display: block;
     margin: 3px;
     padding: 3px;
 }
 
-.reacttextfield .reacttextfield-label {
+.r-textfield .r-textfield-label {
     width: 100px;
     font-weight: 300;
     margin-right: 5px;
     padding-bottom: 3px;
 }
 
-.reacttextfield .reacttextfield-input {
+.r-textfield .r-textfield-input {
     flex-grow: 1;
     -webkit-appearance: none;
     background-color: transparent;
@@ -23,19 +23,19 @@
     border-bottom: 1px solid #7F7F7F;
 }
 
-.reacttextfield .reacttextfield-input:focus {
+.r-textfield .r-textfield-input:focus {
     outline: none;
     border-bottom: 1px solid #CFCFFF;
 }
 
-.reacttextfield .reacttextfield-input:focus {
+.r-textfield .r-textfield-input:focus {
     background-color: transparent;
 }
 
-.reacttextfield.reacttextfield-dirty input {
+.r-textfield.r-textfield-dirty input {
     background-color: antiquewhite;
 }
 
-.reacttextfield.reacttextfield-dirty input:focus {
+.r-textfield.r-textfield-dirty input:focus {
     background-color: antiquewhite;
 }
