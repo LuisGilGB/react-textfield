@@ -31,3 +31,11 @@
 .reacttextfield .reacttextfield-input:focus {
     background-color: transparent;
 }
+
+.reacttextfield.reacttextfield-dirty input {
+    background-color: antiquewhite;
+}
+
+.reacttextfield.reacttextfield-dirty input:focus {
+    background-color: antiquewhite;
+}

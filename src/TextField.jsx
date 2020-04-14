@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from '@luisgilgb/react-container';
 import {isNonEmptyString} from '@luisgilgb/js-utils';
 import {classNamer} from '@luisgilgb/react-utils';
@@ -7,6 +7,7 @@ import './TextField.css';
 const DEFAULT_CLASS_NAME = 'reacttextfield';
 const DEFAULT_LABEL_CLASS_NAME = `${DEFAULT_CLASS_NAME}-label`;
 const DEFAULT_INPUT_CLASS_NAME = `${DEFAULT_CLASS_NAME}-input`;
+const DEFAULT_DIRTY_CLASS_NAME = `${DEFAULT_CLASS_NAME}-dirty`;
 
 const TextField = props => {
     const {
@@ -30,15 +31,20 @@ const TextField = props => {
         ...otherProps
     } = props;
 
+    const [isDirty, setDirty] = useState(false);
+
     const onChange = (e) => {
         const newValue = e.target.value;
         const oldValue = value;
-        onChangeProp && newValue !== oldValue && onChangeProp(props, newValue, oldValue, e);
+        if (newValue !== oldValue) {
+            setDirty(true);
+            onChangeProp && onChangeProp(props, newValue, oldValue, e);
+        }
     }
 
     return (
         <Container
-            className={classNamer(DEFAULT_CLASS_NAME, className)}
+            className={classNamer(DEFAULT_CLASS_NAME, {check: isDirty, className: DEFAULT_DIRTY_CLASS_NAME}, className)}
             layout="rowflex"
             flex={flex}
             width={width}
