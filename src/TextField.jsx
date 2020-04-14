@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@luisgilgb/react-container';
-import {exists} from '@luisgilgb/js-utils';
+import {isNonEmptyString} from '@luisgilgb/js-utils';
 import {classNamer} from '@luisgilgb/react-utils';
 import './TextField.css';
 
@@ -15,6 +15,8 @@ const TextField = props => {
         className = '',
         labelClassName = '',
         inputClassName = '',
+        hideLabel = false,
+        forceLabelTag = false,
         flex,
         width,
         minWidth,
@@ -48,16 +50,18 @@ const TextField = props => {
                 maxHeight
             }}
         >
-            <label
-                className={classNamer(DEFAULT_LABEL_CLASS_NAME, labelClassName)}
-                style={{
-                    width: labelWidth,
-                    minWidth: labelWidth,
-                    maxWidth: labelWidth
-                }}
-            >
-                {label}
-            </label>
+            {!hideLabel && (forceLabelTag || isNonEmptyString(label)) && (
+                <label
+                    className={classNamer(DEFAULT_LABEL_CLASS_NAME, labelClassName)}
+                    style={{
+                        width: labelWidth,
+                        minWidth: labelWidth,
+                        maxWidth: labelWidth
+                    }}
+                >
+                    {label}
+                </label>
+            )}
             <input
                 {...otherProps}
                 type="text"

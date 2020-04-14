@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@luisgilgb/js-utils": "^0.3.2",
-    "@luisgilgb/react-container": "^1.0.6",
+    "@luisgilgb/react-container": "^1.0.7",
     "@luisgilgb/react-utils": "^0.2.3"
   }
 }

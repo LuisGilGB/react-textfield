@@ -39,6 +39,18 @@ function DemoApp() {
                         label="Textfield with height of 200"
                         height={200}
                     />
+                    <TextField
+                        placeholder="Without label"
+                    />
+                    <TextField
+                        forceLabelTag
+                        placeholder="Without label but with forceLabelTag"
+                    />
+                    <TextField
+                        hideLabel
+                        label="Hidden"
+                        placeholder="With label but also hideLabel"
+                    />
                 </Container>
             </Container>
         </Container>
