@@ -10,7 +10,7 @@ const DEFAULT_INPUT_CLASS_NAME = `${DEFAULT_CLASS_NAME}-input`;
 
 const TextField = props => {
     const {
-        value,
+        value = '',
         label = '',
         className = '',
         labelClassName = '',
@@ -63,8 +63,8 @@ const TextField = props => {
             <input
                 {...otherProps}
                 type="text"
-                className={classNamer(DEFAULT_INPUT_CLASS_NAME, inputClassName)}
                 value={value}
+                className={classNamer(DEFAULT_INPUT_CLASS_NAME, inputClassName)}
                 onChange={onChange}
             />
         </Container>
